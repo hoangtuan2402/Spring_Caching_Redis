@@ -1,16 +1,19 @@
 spring:
+  redis:
+    host: localhost
+    port: 6379
   cache:
     type: redis
     redis:
-      time-to-live: 60000
+      time-to-live: 10m
       cache-null-values: true
 
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?useSSL=false
+    url: jdbc:mysql://localhost:3306/test_redis
     username: root
-    password: admin@123
+    password: Shiro2402@#1231
     hikari:
       initialization-fail-timeout: 0
   jpa:

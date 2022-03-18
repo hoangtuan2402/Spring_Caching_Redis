@@ -3,6 +3,7 @@ package com.example.redis.springbootrediscache.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,8 +14,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Employee implements Serializable {
-
+public class Employee  implements Serializable {
     @Id
     @GeneratedValue
     private int id;
